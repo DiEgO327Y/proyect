@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio Nórdico Épico</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="scene" aria-hidden="true">
+      <div class="sky"></div>
+      <div class="mountain mountain-a"></div>
+      <div class="mountain mountain-b"></div>
+      <div class="forest"></div>
+      <div class="mist mist-a"></div>
+      <div class="mist mist-b"></div>
+      <div class="aurora"></div>
+      <div class="snowfall" id="snowfall"></div>
+    </div>
+
+    <header class="topbar">
+      <div class="logo-frame" aria-label="Logotipo">
+        <span class="logo-mark">LOGO</span>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false">Inicio</button>
+      <div class="menu-panel" id="menuPanel" aria-label="Menú de unidades">
+        <button class="menu-item" data-unit="Unidad 1">Unidad 1</button>
+        <button class="menu-item" data-unit="Unidad 2">Unidad 2</button>
+        <button class="menu-item" data-unit="Unidad 3">Unidad 3</button>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <section class="left-column">
+        <div class="portrait-frame">
+          <div class="portrait-placeholder">Tu fotografía</div>
+        </div>
+
+        <aside class="progress-card panel">
+          <h3>Progreso</h3>
+          <ul>
+            <li>
+              <span class="label">Unidad 1</span>
+              <span class="stars" aria-label="Cuatro estrellas">★★★★☆</span>
+            </li>
+            <li>
+              <span class="label">Unidad 2</span>
+              <span class="stars" aria-label="Cinco estrellas">★★★★★</span>
+            </li>
+            <li>
+              <span class="label">Unidad 3</span>
+              <span class="stars" aria-label="Cuatro estrellas">★★★★☆</span>
+            </li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="right-column">
+        <h1 class="hero-name">NOMBRE</h1>
+
+        <section class="bio-card panel">
+          <div class="section-title">Biografía</div>
+          <div class="bio-grid">
+            <div class="bio-item">
+              <span class="icon">❋</span>
+              <span class="label">Sexo:</span>
+              <span class="value">No especificado</span>
+            </div>
+            <div class="bio-item">
+              <span class="icon">❋</span>
+              <span class="label">Ciudad:</span>
+              <span class="value">Lofoten</span>
+            </div>
+            <div class="bio-item">
+              <span class="icon">❋</span>
+              <span class="label">Provincia:</span>
+              <span class="value">Alta Noruega</span>
+            </div>
+            <div class="bio-item">
+              <span class="icon">❋</span>
+              <span class="label">Estudios:</span>
+              <span class="value">Arquitectura antigua</span>
+            </div>
+            <div class="bio-item">
+              <span class="icon">❋</span>
+              <span class="label">Teléfono:</span>
+              <span class="value">+47 555 0100</span>
+            </div>
+            <div class="bio-item">
+              <span class="icon">❋</span>
+              <span class="label">Instagram:</span>
+              <span class="value">@nombres_del_hielo</span>
+            </div>
+            <div class="bio-item">
+              <span class="icon">❋</span>
+              <span class="label">Hobby:</span>
+              <span class="value">Cantar bajo la lluvia</span>
+            </div>
+            <div class="bio-item">
+              <span class="icon">❋</span>
+              <span class="label">Acerca de mí:</span>
+              <span class="value">Guardador de relatos y de la luz de invierno.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="unit-panel panel" id="unitPanel">
+          <div class="unit-panel__copy">
+            <h2 id="unitTitle">Esperando tu próxima acción...</h2>
+            <p id="unitText">
+              La senda aún está en silencio. Elige una unidad y el círculo de la antigua serpiente revelará su leyenda.
+            </p>
+          </div>
+
+          <div class="ouroboros-stage">
+            <svg class="ouroboros" viewBox="0 0 400 400" role="img" aria-label="Ouroboros">
+              <defs>
+                <linearGradient id="serpentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#d8e6ff" />
+                  <stop offset="50%" stop-color="#6b8fbf" />
+                  <stop offset="100%" stop-color="#08131f" />
+                </linearGradient>
+              </defs>
+              <circle cx="200" cy="200" r="156" class="ring-glow"></circle>
+              <path
+                d="M200 70c-37 0-68 30-68 68 0 18 7 34 19 46 9 9 11 20 6 32-5 14-15 24-31 30-20 8-38 28-44 52-7 28 11 51 36 60 24 9 50 5 69-12 17-16 24-42 16-67-6-20-3-40 9-58 10-16 28-30 48-37 24-8 45-24 56-47 17-35 10-78-23-103-18-14-39-22-63-22Z"
+                class="serpent-body"
+              ></path>
+              <circle cx="155" cy="205" r="7" class="serpent-eye"></circle>
+              <circle cx="245" cy="195" r="6" class="serpent-eye"></circle>
+              <path d="M188 172c11-22 29-34 42-42" class="rune-mark"></path>
+              <path d="M212 232c14 13 25 30 27 48" class="rune-mark"></path>
+            </svg>
+            <div class="ouroboros-caption" id="unitCaption">Esperando tu próxima acción...</div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
